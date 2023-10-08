@@ -1,0 +1,75 @@
+# Take a input from a user and print the table
+# How to use the print with formatting f
+# print(f''), How can print the same?
+#
+#
+# n = 2 & print
+#
+# 2 x 1 = 2
+# 2 x 2 = 4
+# 2 x 3 = 6
+# 2 x 4 = 8
+# 2 x 5 = 10
+# 2 x 6 = 12
+# 2 x 7 = 14
+# 2 x 8 = 16
+# 2 x 9 = 18
+# 2 x 10 = 20
+#
+# Task 3 :
+#
+# List the all the functions avaiable for the String Data Type.
+# e.g len()
+
+#Task=1/2
+
+number=input('Enter number\n')
+number=int(number)
+print(f'Table of {number} is :')
+
+print(f'{number} X 1 = {number*1}')
+print(f'{number} X 2 = {number*2}')
+print(f'{number} X 3 = {number*3}')
+print(f'{number} X 4 = {number*4}')
+print(f'{number} X 5 = {number*5}')
+print(f'{number} X 6 = {number*6}')
+print(f'{number} X 7 = {number*7}')
+print(f'{number} X 8 = {number*8}')
+print(f'{number} X 9 = {number*9}')
+print(f'{number} X 10= {number*10}')
+
+
+#Task-3
+
+# List of string methods
+
+# getting list of methods in available in builtins str class
+
+methods = dir(str)
+# printing contents of the list in line by line
+
+print(*methods, sep='\n')
+
+"""
+The function len() returns number of elements in an object. 
+"""
+abc = 'A'
+print(abc)
+name = "Santosh kumar jogi"
+print(name)
+my_string = "My sample 'code'"
+print(my_string)
+
+#type-2
+# Create a sample string
+sample_string = "Hello, World!"
+
+# Use dir() to get a list of all attributes (including methods)
+string_methods = dir(sample_string)
+
+# Filter out only the methods (usually methods are in lowercase)
+string_methods = [method for method in string_methods if callable(getattr(sample_string, method))]
+
+# Print the list of string methods
+for method in string_methods:
+    print(method)
