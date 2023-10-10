@@ -1,0 +1,21 @@
+# Get a list of numbers as input from the user
+input_numbers = input("Enter a list of numbers separated by spaces: \n").split()
+
+# Convert the input strings to integers
+numbers = [int(num) for num in input_numbers]
+
+# Create a dictionary to store the count of each number
+num_count = {}
+
+# Iterate through the list and count the occurrences of each number
+for num in numbers:
+    if num in num_count:
+        num_count[num] += 1
+    else:
+        num_count[num] = 1
+
+# Print the duplicate numbers
+print("Duplicate numbers in the list are:\n")
+for num, count in num_count.items():
+    if count > 1:
+        print(f"{num} (count: {count})")
