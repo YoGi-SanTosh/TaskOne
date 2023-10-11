@@ -1,0 +1,27 @@
+def find_duplicates_and_non_duplicates(numbers):
+    # Initialize empty lists for duplicates and non-duplicates
+    duplicates = []
+    non_duplicates = []
+
+    # Iterate through the list of numbers
+    for number in numbers:
+        if numbers.count(number) > 1:
+            # If the number appears more than once, it's a duplicate
+            duplicates.append(number)
+        else:
+            # If the number appears only once, it's a non-duplicate
+            non_duplicates.append(number)
+
+    return duplicates, non_duplicates
+
+# Get input from the user and split it into a list of integers
+user_input = input("Enter a list of numbers separated by spaces: ")
+user_input = user_input.split()
+numbers = [int(num) for num in user_input]
+
+# Find duplicates and non-duplicates
+duplicates, non_duplicates = find_duplicates_and_non_duplicates(numbers)
+
+# Print the results
+print("Duplicate numbers: ", duplicates)
+print("Non-duplicate numbers: ", non_duplicates)
