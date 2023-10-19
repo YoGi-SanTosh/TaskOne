@@ -1,0 +1,37 @@
+##Task-1
+# Research What is Fibonacci series and Factorial.
+# Take an input and print the series.
+
+# Function to calculate factorial
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Function to print Fibonacci series
+def fibonacci_series(n):
+    a, b = 0, 1
+    for i in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+
+# Input from the user
+num = int(input("Enter a number: "))
+
+# Check if the number is non-negative
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    print(f"Fibonacci series of {num} numbers:")
+    fibonacci_series(num)
+    print(f"\nFactorial of {num} is {factorial(num)}")
+
+ ##Task-2
+#Example using break to exit a loop when i == 51 while printing the values from 1 to 100
+
+for i in range(1, 101):
+    print(i, end=' \n')
+    if i == 51:
+        break
+   # print(i)
