@@ -1,0 +1,93 @@
+#Write a Python program to find the largest number in a list.
+def find_largest_number(numbers):
+    if not numbers:
+        return None  # Return None if the list is empty
+
+    largest = numbers[0]  # Initialize 'largest' with the first element of the list
+
+    for num in numbers:
+        if num > largest:
+            largest = num  # Update 'largest' if a larger number is found
+
+    return largest
+
+# Example usage:
+my_list = [12, 45, 74, 31, 68, 97, 102, 8,120]
+largest_number = find_largest_number(my_list)
+if largest_number is not None:
+    print(f"The largest number in the list is: {largest_number}")
+else:
+    print("The list is empty.")
+
+
+
+#write the programme to find the smallest number
+
+
+    def find_smallest_number(numbers):
+        if not numbers:
+            return None  # Return None if the list is empty
+
+        smallest = numbers[0]  # Initialize 'smallest' with the first element of the list
+
+        for num in numbers:
+            if num < smallest:
+                smallest = num  # Update 'smallest' if a smaller number is found
+
+        return smallest
+
+
+    # Example usage:
+    my_list = [12, 45, 74, 31, 68, 97, 102, 8]
+    smallest_number = find_smallest_number(my_list)
+    if smallest_number is not None:
+        print(f"The smallest number in the list is: {smallest_number}")
+    else:
+        print("The list is empty.")
+
+
+#Write a Python program to sum all numbers in a list.
+
+# Define a list of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Initialize a variable to store the sum
+total = 0
+
+# Iterate through the list and add each number to the total
+for number in numbers:
+    total += number
+
+# Print the sum
+print("The sum of the numbers is:", total)
+
+#Write a Python program to multiply all numbers in a list.
+
+from functools import reduce
+
+def multiply(x, y):
+    return x * y
+
+def multiply_list_numbers(numbers):
+    result = reduce(multiply, numbers)
+    return result
+
+# Example usage
+my_list = [2, 3, 4, 5]
+result = multiply_list_numbers(my_list)
+print("The product of the numbers is:", result)
+
+
+#Write a Python program to count the number of strings in a list where the string length is 2 or more and the first and last character are the same.
+
+def count_strings_with_same_first_and_last_char(strings):
+    count = 0  # Initialize a counter to keep track of the matching strings
+    for s in strings:
+        if len(s) >= 2 and s[0] == s[-1]:
+            count += 1
+    return count
+
+# Example usage
+my_list = ["aba", "xyz", "aa", "abca", "hello"]
+result = count_strings_with_same_first_and_last_char(my_list)
+print("Number of strings with the same first and last character:", result)
